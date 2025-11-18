@@ -4,8 +4,8 @@ This project is a modified and extended fork of the freeCodeCamp boilerplate for
 https://github.com/freeCodeCamp/boilerplate-rock-paper-scissors
 
 Intro
-- • This is an AI project that plays Rock–Paper–Scissors against four bots (mrguesh, quincy, abbie, kris).
-- • Approach: a hybrid method between static heuristics and adaptive learning (strategy detection + online weighting).
+- This is an AI project that plays Rock–Paper–Scissors against four bots (mrguesh, quincy, abbie, kris).
+- Approach: a hybrid method between static heuristics and adaptive learning (strategy detection + online weighting).
 
 Repository structure 
 - strategies/ — detectors and helpers (repeat, cycle, reaction, frequency, frequency_short_term)
@@ -22,13 +22,13 @@ How to run
 - Run test_module.py:
 
 Strategies implemented
-- • Strategy 1 — Repeat
+  • Strategy 1 — Repeat
   - Detects if the opponent repeats the same move for at least the last 4 moves.
 
-- • Strategy 2 — Reaction (Markov-like, order 1)
+  • Strategy 2 — Reaction (Markov-like, order 1)
   - Detects opponent responses conditioned on our previous move (mirror, counter, expect non-repeat).
 
-- • Strategy 3 — Cycle
+  • Strategy 3 — Cycle
   - Searches for cycles of length 2–5.
   - Strong cycle criteria and tie-breakers:
     1. At least 3 total occurrences to be "strong".
@@ -37,13 +37,13 @@ Strategies implemented
     4. Prefer more recent occurrences.
     5. If still tied, prefer the longer cycle; they are more predictable on a long-term.
 
-- • Strategy 4 — Frequency short-term
+  • Strategy 4 — Frequency short-term
   - Looks at the last 100 opponent moves, with extra weight for the most recent 50.
 
-- • Strategy 5 — Frequency long-term
+  • Strategy 5 — Frequency long-term
   - Most frequent moves over the whole opponent history
 
-Note
+    Note
   - Frequency short-term and Frequency long-term strategies consider coverage, not only raw count.
 
 Player implementations and combination
@@ -70,9 +70,9 @@ Player behaviors
   - Tracks score_drop and prev_best_score; if best strategy degrades for >2 rounds, injects extra randomness to avoid exploitation.
   - Very effective (observed win rates >90%).
 
-![Example execution — attempt 1](images/example_execution.png)
+![Example execution — attempt 1](images/attempt 1.PNG)
 
-![Example execution — attempt 2](images/example_execution_attempt2.png)
+![Example execution — attempt 2](images/attempt 2.PNG)
 
 Future Work
   - 2nd-order Markov reaction model
