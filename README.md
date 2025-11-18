@@ -70,9 +70,9 @@ Player behaviors
   - Tracks score_drop and prev_best_score; if best strategy degrades for >2 rounds, injects extra randomness to avoid exploitation.
   - Very effective (observed win rates >90%).
 
-![Example execution — attempt 1](images/attempt 1.PNG)
+![Example execution — attempt1](images/attempt1.PNG)
 
-![Example execution — attempt 2](images/attempt 2.PNG)
+![Example execution — attempt2](images/attempt2.PNG)
 
 Future Work
   - 2nd-order Markov reaction model
